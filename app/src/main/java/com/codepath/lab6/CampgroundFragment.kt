@@ -13,6 +13,8 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
 import org.json.JSONException
 import kotlin.let
+import com.codepath.lab6.createJson
+
 
 private const val TAG = "CampgroundFragment"
 private const val API_KEY = BuildConfig.API_KEY
@@ -81,7 +83,7 @@ class CampgroundFragment : Fragment() {
                         CampgroundResponse.serializer(),
                         json.jsonObject.toString()
                     )
-                    parsedJson.data?.let { list ->
+                    parsedJson.data?.let { list: List<Campground> ->
                         campgrounds.addAll(list)
                         campgroundAdapter.notifyDataSetChanged()
                     }

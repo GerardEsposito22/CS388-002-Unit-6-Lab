@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/detailImage"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:adjustViewBounds="true"
         android:contentDescription="Detail Image"
         android:scaleType="centerCrop"
